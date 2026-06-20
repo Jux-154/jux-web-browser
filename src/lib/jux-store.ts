@@ -185,7 +185,7 @@ export const useJux = create<JuxState>()(
     {
       name: "jux-web-store",
       storage: createJSONStorage(() =>
-        typeof window !== "undefined" ? window.localStorage : (noopStorage as Storage),
+        typeof window !== "undefined" ? window.localStorage : (noopStorage as unknown as Storage),
       ),
     },
   ),
